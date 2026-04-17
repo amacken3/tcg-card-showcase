@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "../components/SearchBar";
+import CardInventoryList from "../components/CardInventoryList"
 
 function ShopPage(props) {
   const cards = props.cards || [];
@@ -16,11 +17,7 @@ function ShopPage(props) {
         searchTerm={searchTerm}
         onSearchChange={(e) => setSearchTerm(e.target.value)}
       />
-      <ul>
-        {filteredCards.map((card) => (
-          <li key={card.id}>{card.name}</li>
-        ))}
-      </ul>
+      <CardInventoryList cards={filteredCards} />
     </div>
   );
 }

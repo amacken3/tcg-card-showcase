@@ -10,7 +10,7 @@ describe("App routes", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /home page/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /stack & shuffle/i })).toBeInTheDocument();
   });
 
   test("renders shop page at /shop", () => {

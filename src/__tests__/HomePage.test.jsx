@@ -11,7 +11,7 @@ describe("HomePage", () => {
 
     expect(
       screen.getByText(
-        /browse inventory in the shop, search for specific cards, and manage listings through the admin portal/i
+        /a trading card shop focused on singles for collectors and players/i
       )
     ).toBeInTheDocument();
   });

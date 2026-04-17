@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddCardForm() {
+function AddCardForm({ addCard }) {
   const [formData, setFormData] = useState({
     name: "",
     game: "",
@@ -20,11 +20,21 @@ function AddCardForm() {
     });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+    function handleSubmit(e) {
+        e.preventDefault();
 
-    console.log("New card submitted:", formData);
-  }
+        addCard(formData);
+
+        setFormData({
+            name: "",
+            game: "",
+            set: "",
+            condition: "",
+            price: "",
+            stock: 0,
+            image: "",
+        });
+    }
 
   return (
     <form onSubmit={handleSubmit}>

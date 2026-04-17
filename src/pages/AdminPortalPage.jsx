@@ -1,14 +1,12 @@
 import AddCardForm from "../components/AddCardForm";
 import CardInventoryList from "../components/CardInventoryList";
 
-function AdminPortalPage(props) {
-  const cards = props.cards || [];
-
+function AdminPortalPage({ cards, addCard }) {
   return (
     <div>
       <h1>Admin Portal Page</h1>
       <p>Manage inventory for Stack & Shuffle.</p>
-      <AddCardForm />
+      <AddCardForm addCard={addCard} />
       <CardInventoryList cards={cards} />
     </div>
   );

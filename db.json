@@ -1,7 +1,7 @@
 {
   "cards": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Blue-Eyes White Dragon",
       "game": "Yu-Gi-Oh!",
       "set": "Legend of Blue Eyes White Dragon",
@@ -11,7 +11,7 @@
       "image": "https://images.ygoprodeck.com/images/cards/89631139.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Charizard",
       "game": "Pokémon",
       "set": "Base Set",
@@ -21,14 +21,25 @@
       "image": "https://images.pokemontcg.io/base1/4.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Black Lotus",
       "game": "Magic: The Gathering",
       "set": "Unlimited Edition",
       "condition": "Moderately Played",
-      "price": 12000.00,
+      "price": 12000,
       "stock": 1,
       "image": "https://cards.scryfall.io/normal/front/4/5/45ceeeb2-80ce-4f12-a67d-a43140d3d8d1.jpg"
+    },
+    {
+      "name": "Debby",
+      "game": "fff",
+      "set": "fff",
+      "condition": "ffff",
+      "price": "fff",
+      "stock": 2,
+      "image": "https://www.google.com/search?client=opera-gx&q=ff15&sourceid=opera&ie=UTF-8&oe=UTF-8",
+      "id": "8NFvcr8mdiQ"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

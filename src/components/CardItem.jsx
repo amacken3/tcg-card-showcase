@@ -1,6 +1,4 @@
-function CardItem(props) {
-    const card = props.card
-
+function CardItem({ card }) {
     return (
         <li>{card.name}</li>
     )

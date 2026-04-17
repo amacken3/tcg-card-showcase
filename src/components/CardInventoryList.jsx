@@ -1,8 +1,6 @@
 import CardItem from "./CardItem";
 
-function CardInventoryList(props) {
-    const cards = props.cards || []
-
+function CardInventoryList({ cards }) {
     return (
         <ul>
             {cards.map((card) => (

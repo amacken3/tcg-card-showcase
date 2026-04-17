@@ -1,10 +1,12 @@
+import CardItem from "./CardItem";
+
 function CardInventoryList(props) {
     const cards = props.cards || []
 
     return (
         <ul>
             {cards.map((card) => (
-                <li key={card.id}>{card.name}</li>
+                <CardItem key={card.id} card={card} />
             ))}
         </ul>
     )

@@ -6,12 +6,12 @@ import AdminPortalPage from "./pages/AdminPortalPage";
 
 function App() {
   const cards = useCards();
-  
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/shop" element={<ShopPage cards={cards} />} />
-      <Route path="/admin" element={<AdminPortalPage />} />
+      <Route path="/admin" element={<AdminPortalPage cards={cards}/>} />
     </Routes>
   );
 }

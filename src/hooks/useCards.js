@@ -18,7 +18,9 @@ function useCards() {
       body: JSON.stringify(newCard),
     })
       .then((response) => response.json())
-      .then((createdCard) => setCards([...cards, createdCard]));
+      .then((createdCard) =>
+        setCards((currentCards) => [...currentCards, createdCard])
+      );
   }
 
   function deleteCard(id) {
@@ -49,7 +51,7 @@ function useCards() {
       });
   }
 
-  return { cards, addCard};
+  return { cards, addCard, deleteCard, updateCard };
 }
 
 export default useCards;

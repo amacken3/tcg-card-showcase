@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SearchBar from "../components/SearchBar";
 
 function ShopPage(props) {
   const cards = props.cards || [];
@@ -11,12 +12,9 @@ function ShopPage(props) {
   return (
     <div>
       <h1>Shop Page</h1>
-      <label htmlFor="search">Search Cards</label>
-      <input
-        id="search"
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+      <SearchBar
+        searchTerm={searchTerm}
+        onSearchChange={(e) => setSearchTerm(e.target.value)}
       />
       <ul>
         {filteredCards.map((card) => (

@@ -29,17 +29,6 @@
       "price": 12000,
       "stock": 1,
       "image": "https://cards.scryfall.io/normal/front/4/5/45ceeeb2-80ce-4f12-a67d-a43140d3d8d1.jpg"
-    },
-    {
-      "name": "Debby",
-      "game": "fff",
-      "set": "fff",
-      "condition": "ffff",
-      "price": "fff",
-      "stock": 2,
-      "image": "https://www.google.com/search?client=opera-gx&q=ff15&sourceid=opera&ie=UTF-8&oe=UTF-8",
-      "id": "8NFvcr8mdiQ"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

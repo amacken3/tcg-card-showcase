@@ -1,0 +1,24 @@
+.page {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(180deg, #134e4a 0%, #164e63 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formSection {
+  width: 100%;
+  max-width: 1400px;
+  background: #9f7a57;
+  border: 4px solid #1f2937;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.listSection {
+  width: 100%;
+  max-width: 1400px;
+}

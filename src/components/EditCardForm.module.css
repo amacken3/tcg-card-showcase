@@ -1,0 +1,32 @@
+.form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.label {
+  text-align: left;
+  color: #6b4f3a;
+  font-weight: 600;
+}
+
+.input {
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+}
+
+.button {
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #000000;
+}

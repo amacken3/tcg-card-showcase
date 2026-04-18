@@ -1,13 +1,18 @@
+import styles from "./SearchBar.module.css";
+
 function SearchBar({ searchTerm, onSearchChange }) {
-  return (
-    <div>
-        <label htmlFor="search">Search Cards</label>
-        <input
-            id="search"
-            type="text"
-            value={searchTerm}
-            onChange={onSearchChange}
-        />
+   return (
+    <div className={styles.wrapper}>
+      <label className={styles.label} htmlFor="search">
+        Search Cards
+      </label>
+      <input
+        className={styles.input}
+        id="search"
+        type="text"
+        value={searchTerm}
+        onChange={onSearchChange}
+      />
     </div>
   );
 }

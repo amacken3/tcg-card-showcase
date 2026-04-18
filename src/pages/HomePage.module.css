@@ -1,0 +1,12 @@
+.page {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(180deg, #134e4a 0%, #164e63 100%);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.description {
+  display: none;
+}

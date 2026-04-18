@@ -1,0 +1,28 @@
+.page {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(180deg, #134e4a 0%, #164e63 100%);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.layout {
+  width: 100%;
+  max-width: 1400px;
+  background: #9f7a57;
+  border: 4px solid #1f2937;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 0;
+  min-height: 720px;
+}
+
+.sidebar {
+  background: #b89b81;
+  padding: 1.5rem;
+  border-right: 3px solid #1f2937;
+}
+
+.mainContent {
+  padding: 1.5rem;
+}

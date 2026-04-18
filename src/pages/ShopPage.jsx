@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "../components/SearchBar";
-import CardInventoryList from "../components/CardInventoryList"
+import CardInventoryList from "../components/CardInventoryList";
+import styles from "./ShopPage.module.css";
 
 function ShopPage(props) {
   const cards = props.cards || [];

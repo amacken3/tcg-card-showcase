@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./EditCardForm.module.css";
 
 function EditCardForm({ card, updateCard }) {
   const [price, setPrice] = useState(String(card.price));

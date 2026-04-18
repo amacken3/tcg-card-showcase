@@ -1,4 +1,5 @@
 import StoreBanner from "../components/StoreBanner";
+import styles from "./HomePage.module.css";
 
 function HomePage() {
   return (

@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #9b8777;
+  padding: 1.25rem 2.5rem;
+  border-bottom: 3px solid #4a3b30;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+}
+
+.active {
+  border-bottom: 4px solid white;
+}

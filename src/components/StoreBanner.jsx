@@ -1,3 +1,5 @@
+import styles from "./StoreBanner.module.css";
+
 function StoreBanner({ title, subtitle }) {
   return (
     <div>

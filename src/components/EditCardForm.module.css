@@ -1,0 +1,26 @@
+.form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #6a4b32;
+  text-align: left;
+}
+
+.input {
+  padding: 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #c9c9c9;
+}
+
+.button {
+  background: #7a4c2f;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

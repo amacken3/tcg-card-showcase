@@ -1,5 +1,6 @@
 import AddCardForm from "../components/AddCardForm";
 import CardInventoryList from "../components/CardInventoryList";
+import styles from "./AdminPortalPage.module.css";
 
 function AdminPortalPage({ cards, addCard, updateCard, deleteCard }) {
   return (

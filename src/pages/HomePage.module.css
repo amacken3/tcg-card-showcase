@@ -1,0 +1,9 @@
+.page {
+  background: #9b7250;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+}
+
+.description {
+  display: none;
+}

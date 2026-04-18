@@ -1,0 +1,30 @@
+.page {
+  background: #9b7250;
+  min-height: calc(100vh - 80px);
+  border: 4px solid #2f2a26;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  display: none;
+}
+
+.subtext {
+  display: none;
+}
+
+.formSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.listSection {
+  width: 100%;
+}

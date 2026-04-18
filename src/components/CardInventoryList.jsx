@@ -1,4 +1,5 @@
 import CardItem from "./CardItem";
+import styles from "./CardInventoryList.module.css";
 
 function CardInventoryList({ cards = [], onDelete, showDeleteButton = false, updateCard, showEditForm = false }) {
     return (

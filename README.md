@@ -1,16 +1,74 @@
-# React + Vite
+# Stack & Shuffle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Stack & Shuffle is a React-based single page application for a trading card shop. Users can browse inventory, search for cards, and view card details, while the admin side allows inventory to be added, updated, and removed.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Client-side routing with React Router
+- Home page with branded store banner
+- Shop page with searchable card inventory
+- Admin page with inventory management tools
+- Full CRUD with `json-server`
+- Shared inventory state through a custom hook and React context
+- Controlled forms for adding and editing cards
+- Component and page test coverage with Vitest and React Testing Library
 
-## React Compiler
+## Hooks Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project uses both standard and custom React hooks.
 
-## Expanding the ESLint configuration
+### Standard hooks
+- `useState` for form state and search state
+- `useEffect` for fetching card data
+- `useContext` for shared inventory data/functions
+- `useRef` for refocusing the form input after submission
+- `useId` for accessible label/input pairing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Custom hook
+- `useCards` for fetching cards and handling create, update, and delete logic
+
+## Routes
+
+- `/` → Home page
+- `/shop` → Shop inventory page
+- `/admin` → Admin inventory management page
+
+## How the App Works
+
+### Home page
+The home page displays the store banner and branding for Stack & Shuffle.
+
+### Shop page
+The shop page reads inventory data and displays all available cards. Users can search by card name using the search bar, and the list updates as they type.
+
+### Admin page
+The admin page allows inventory management. New cards can be added through a controlled form, existing cards can be deleted, and card price/stock values can be updated.
+
+## Tech Stack
+
+- React
+- React Router
+- Vite
+- CSS Modules
+- `json-server`
+- Vitest
+- React Testing Library
+
+## Project Setup
+
+### 1. Clone the repository
+
+You will need three terminals open to allow for running the local json server, running the dev server, and running the tests
+
+```bash
+git clone https://github.com/amacken3/tcg-card-showcase.git
+
+cd tcg-card-showcase
+
+npm install
+
+npm run server 
+
+npm run dev
+
+npm run test

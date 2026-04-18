@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import { vi } from "vitest";
 import AdminPortalPage from "../pages/AdminPortalPage";
+import CardsContext from "../context/CardsContext";
 
 describe("AdminPortalPage", () => {
   const mockCards = [
@@ -25,16 +27,29 @@ describe("AdminPortalPage", () => {
     },
   ];
 
-  test("renders admin portal heading", () => {
-    render(<AdminPortalPage cards={mockCards} />);
+  const mockContextValue = {
+    cards: mockCards,
+    addCard: vi.fn(),
+    updateCard: vi.fn(),
+    deleteCard: vi.fn(),
+  };
 
-    expect(
-      screen.getByRole("heading", { name: /admin portal page/i })
-    ).toBeInTheDocument();
+  test("renders add card form on admin page", () => {
+    render(
+      <CardsContext.Provider value={mockContextValue}>
+        <AdminPortalPage />
+      </CardsContext.Provider>
+    );
+
+    expect(screen.getByRole("button", { name: /add card/i })).toBeInTheDocument();
   });
 
   test("renders cards on the admin page", () => {
-    render(<AdminPortalPage cards={mockCards} />);
+    render(
+      <CardsContext.Provider value={mockContextValue}>
+        <AdminPortalPage />
+      </CardsContext.Provider>
+    );
 
     expect(screen.getByText(/blue-eyes white dragon/i)).toBeInTheDocument();
     expect(screen.getByText(/charizard/i)).toBeInTheDocument();

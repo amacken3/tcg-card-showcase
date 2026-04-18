@@ -12,13 +12,19 @@ function ShopPage(props) {
   );
 
   return (
-    <div>
-      <h1>Shop Page</h1>
-      <SearchBar
-        searchTerm={searchTerm}
-        onSearchChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <CardInventoryList cards={filteredCards} />
+    <div className={styles.page}>
+      <div className={styles.layout}>
+        <div className={styles.sidebar}>
+          <SearchBar
+            searchTerm={searchTerm}
+            onSearchChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+
+        <div className={styles.mainContent}>
+          <CardInventoryList cards={filteredCards} />
+        </div>
+      </div>
     </div>
   );
 }

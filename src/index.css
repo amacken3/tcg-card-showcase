@@ -2,14 +2,20 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  min-height: 100%;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #e5e5e5;
+  background: #164e63;
+  color: #111827;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -20,4 +26,5 @@ input {
 
 img {
   display: block;
+  max-width: 100%;
 }

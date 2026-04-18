@@ -25,4 +25,20 @@
 
 .mainContent {
   padding: 1.5rem;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 3px solid #1f2937;
+  }
 }

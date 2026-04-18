@@ -10,7 +10,9 @@ describe("App routes", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /stack & shuffle/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /stack & shuffle/i })
+    ).toBeInTheDocument();
   });
 
   test("renders shop page at /shop", () => {
@@ -20,7 +22,9 @@ describe("App routes", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /shop page/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("textbox", { name: /search cards/i })
+    ).toBeInTheDocument();
   });
 
   test("renders admin portal page at /admin", () => {
@@ -30,6 +34,8 @@ describe("App routes", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByRole("heading", { name: /admin portal page/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /add card/i })
+    ).toBeInTheDocument();
   });
 });

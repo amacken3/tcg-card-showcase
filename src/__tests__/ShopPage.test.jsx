@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ShopPage from "../pages/ShopPage";
+import CardsContext from "../context/CardsContext";
 
 describe("ShopPage", () => {
   const mockCards = [
@@ -27,7 +28,11 @@ describe("ShopPage", () => {
   ];
 
   test("renders all cards on the page", () => {
-    render(<ShopPage cards={mockCards} />);
+    render(
+      <CardsContext.Provider value={{ cards: mockCards }}>
+        <ShopPage />
+      </CardsContext.Provider>
+    );
 
     expect(screen.getByText(/blue-eyes white dragon/i)).toBeInTheDocument();
     expect(screen.getByText(/charizard/i)).toBeInTheDocument();
@@ -36,7 +41,11 @@ describe("ShopPage", () => {
   test("filters cards by search input", async () => {
     const user = userEvent.setup();
 
-    render(<ShopPage cards={mockCards} />);
+    render(
+      <CardsContext.Provider value={{ cards: mockCards }}>
+        <ShopPage />
+      </CardsContext.Provider>
+    );
 
     const searchInput = screen.getByRole("textbox", { name: /search cards/i });
     await user.type(searchInput, "char");

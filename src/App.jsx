@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import useCards from "./hooks/useCards"
+import useCards from "./hooks/useCards";
+import CardsContext from "./context/CardsContext";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import AdminPortalPage from "./pages/AdminPortalPage";
@@ -9,23 +10,17 @@ function App() {
   const { cards, addCard, deleteCard, updateCard } = useCards();
 
   return (
-    <>
+    <CardsContext.Provider
+      value={{ cards, addCard, deleteCard, updateCard }}
+    >
       <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShopPage cards={cards} />} />
-        <Route 
-          path="/admin" 
-         element={
-            <AdminPortalPage
-              cards={cards} 
-               addCard={addCard}
-              deleteCard={deleteCard}
-              updateCard={updateCard}
-            />}
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/admin" element={<AdminPortalPage />}
         />
       </Routes>
-    </>
+    </CardsContext.Provider>
   );
 }
 

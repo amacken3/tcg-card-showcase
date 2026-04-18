@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import styles from "./EditCardForm.module.css";
 
 function EditCardForm({ card, updateCard }) {
   const [price, setPrice] = useState(String(card.price));
   const [stock, setStock] = useState(card.stock);
+
+  const priceId = useId();
+  const stockId = useId();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,19 +19,19 @@ function EditCardForm({ card, updateCard }) {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <label className={styles.label} htmlFor={`price-${card.id}`}>Price</label>
+      <label className={styles.label} htmlFor={priceId}>Price</label>
       <input
         className={styles.input}
-        id={`price-${card.id}`}
+        id={priceId}
         type="text"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
       />
 
-      <label className={styles.label} htmlFor={`stock-${card.id}`}>Stock</label>
+      <label className={styles.label} htmlFor={stockId}>Stock</label>
       <input
         className={styles.input}
-        id={`stock-${card.id}`}
+        id={stockId}
         type="number"
         value={stock}
         onChange={(e) => setStock(Number(e.target.value))}
